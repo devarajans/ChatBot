@@ -21,10 +21,10 @@ server.listen(process.env.port || process.env.PORT || 3978, function () {
   
 // Create chat bot
 var connector = new builder.ChatConnector({
-    appId: "yahoo",
-    appPassword: "yahoo"
-    // appId: "98a5925b-2bd9-4fed-8991-3573dab9b93e",
-    // appPassword: "3j5XeaokPAhCTWJ76HjYvY9"
+    // appId: "yahoo",
+    // appPassword: "yahoo"
+    appId: "98a5925b-2bd9-4fed-8991-3573dab9b93e",
+    appPassword: "3j5XeaokPAhCTWJ76HjYvY9"
 });
 var bot = new builder.UniversalBot(connector);
 server.post('/api/messages', connector.listen());
